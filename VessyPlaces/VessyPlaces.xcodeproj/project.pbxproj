@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE2D50C829C4B03E0037D9BE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D50C729C4B03E0037D9BE /* APIManager.swift */; };
+		AE2D50CB29C4B3080037D9BE /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D50CA29C4B3080037D9BE /* Place.swift */; };
+		AE2D50CD29C4B44D0037D9BE /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D50CC29C4B44D0037D9BE /* PlacesService.swift */; };
+		AE2D50CF29C4BC2C0037D9BE /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D50CE29C4BC2C0037D9BE /* PlaceCell.swift */; };
+		AE2D50D229C4D6990037D9BE /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2D50D129C4D6990037D9BE /* TabBar.storyboard */; };
+		AE2D50D429C4D6FF0037D9BE /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2D50D329C4D6FF0037D9BE /* MapView.storyboard */; };
+		AE2D50D629C4D70C0037D9BE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D50D529C4D70C0037D9BE /* MapViewController.swift */; };
+		AE33B62529C4DC5700253083 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33B62429C4DC5700253083 /* MapViewModel.swift */; };
+		AE33B62729C4DC6600253083 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33B62629C4DC6600253083 /* ListViewModel.swift */; };
+		AE3DF66A29C5EA4400EA7F43 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3DF66929C5EA4400EA7F43 /* SearchTableViewCell.swift */; };
+		AE52B7E129C486980093550B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE52B7E029C486980093550B /* AppDelegate.swift */; };
+		AE52B7E329C486980093550B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE52B7E229C486980093550B /* SceneDelegate.swift */; };
+		AE52B7E529C486980093550B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE52B7E429C486980093550B /* ListViewController.swift */; };
+		AE52B7E829C486980093550B /* ListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE52B7E629C486980093550B /* ListView.storyboard */; };
+		AE52B7EA29C4869A0093550B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE52B7E929C4869A0093550B /* Assets.xcassets */; };
+		AE52B7ED29C4869A0093550B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE52B7EB29C4869A0093550B /* LaunchScreen.storyboard */; };
+		AE8EF30029C8D3DA00E4832E /* CLLocationCoordinate2D+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8EF2FF29C8D3DA00E4832E /* CLLocationCoordinate2D+Distance.swift */; };
+		AEC48BF329C75BF000858F5D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC48BF229C75BF000858F5D /* R.generated.swift */; };
+		AEC48BF529C75FF400858F5D /* PlaceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC48BF429C75FF400858F5D /* PlaceCellViewModel.swift */; };
+		AEC48BF729C775D800858F5D /* PlaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC48BF629C775D800858F5D /* PlaceDetails.swift */; };
+		AEC48BFA29C77F3500858F5D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC48BF929C77F3500858F5D /* LocationManager.swift */; };
+		AEFC92C729C71D4A00BC5B81 /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFC92C629C71D4A00BC5B81 /* PlaceDetailsViewController.swift */; };
+		AEFC92C929C71D5700BC5B81 /* PlaceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFC92C829C71D5700BC5B81 /* PlaceDetailsViewModel.swift */; };
+		AEFC92CB29C71D6500BC5B81 /* PlaceDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFC92CA29C71D6500BC5B81 /* PlaceDetailsView.storyboard */; };
+		B2F8D8A1F80DCAD82CB7A410 /* Pods_VessyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A2EF7FE534EAC660D1DB46 /* Pods_VessyPlaces.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		50A2EF7FE534EAC660D1DB46 /* Pods_VessyPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VessyPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2D50C729C4B03E0037D9BE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		AE2D50CA29C4B3080037D9BE /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		AE2D50CC29C4B44D0037D9BE /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
+		AE2D50CE29C4BC2C0037D9BE /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		AE2D50D129C4D6990037D9BE /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		AE2D50D329C4D6FF0037D9BE /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		AE2D50D529C4D70C0037D9BE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AE33B62429C4DC5700253083 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		AE33B62629C4DC6600253083 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		AE3DF66929C5EA4400EA7F43 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		AE52B7DD29C486980093550B /* VessyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VessyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE52B7E029C486980093550B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE52B7E229C486980093550B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AE52B7E429C486980093550B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		AE52B7E729C486980093550B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ListView.storyboard; sourceTree = "<group>"; };
+		AE52B7E929C4869A0093550B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE52B7EC29C4869A0093550B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE52B7EE29C4869A0093550B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8EF2FF29C8D3DA00E4832E /* CLLocationCoordinate2D+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Distance.swift"; sourceTree = "<group>"; };
+		AEC48BF229C75BF000858F5D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		AEC48BF429C75FF400858F5D /* PlaceCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCellViewModel.swift; sourceTree = "<group>"; };
+		AEC48BF629C775D800858F5D /* PlaceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetails.swift; sourceTree = "<group>"; };
+		AEC48BF929C77F3500858F5D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		AEFC92C629C71D4A00BC5B81 /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
+		AEFC92C829C71D5700BC5B81 /* PlaceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewModel.swift; sourceTree = "<group>"; };
+		AEFC92CA29C71D6500BC5B81 /* PlaceDetailsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaceDetailsView.storyboard; sourceTree = "<group>"; };
+		B3FF9BBF47869A89CF89060B /* Pods-VessyPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VessyPlaces.release.xcconfig"; path = "Target Support Files/Pods-VessyPlaces/Pods-VessyPlaces.release.xcconfig"; sourceTree = "<group>"; };
+		BE1505FEAA826B007092F096 /* Pods-VessyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VessyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-VessyPlaces/Pods-VessyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE52B7DA29C486980093550B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2F8D8A1F80DCAD82CB7A410 /* Pods_VessyPlaces.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE2D50C029C4AA8C0037D9BE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AE2D50D029C4D65C0037D9BE /* TabBar */,
+				AE2D50C229C4AB180037D9BE /* Map */,
+				AE2D50C329C4AB230037D9BE /* List */,
+				AEFC92C529C71D2100BC5B81 /* PlaceDetails */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		AE2D50C129C4AAA70037D9BE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AE2D50C729C4B03E0037D9BE /* APIManager.swift */,
+				AE2D50CC29C4B44D0037D9BE /* PlacesService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AE2D50C229C4AB180037D9BE /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				AE2D50D529C4D70C0037D9BE /* MapViewController.swift */,
+				AE33B62429C4DC5700253083 /* MapViewModel.swift */,
+				AE3DF66929C5EA4400EA7F43 /* SearchTableViewCell.swift */,
+				AE2D50D329C4D6FF0037D9BE /* MapView.storyboard */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		AE2D50C329C4AB230037D9BE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				AE52B7E429C486980093550B /* ListViewController.swift */,
+				AE33B62629C4DC6600253083 /* ListViewModel.swift */,
+				AE2D50CE29C4BC2C0037D9BE /* PlaceCell.swift */,
+				AEC48BF429C75FF400858F5D /* PlaceCellViewModel.swift */,
+				AE52B7E629C486980093550B /* ListView.storyboard */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		AE2D50C929C4B2F40037D9BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE2D50CA29C4B3080037D9BE /* Place.swift */,
+				AEC48BF629C775D800858F5D /* PlaceDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE2D50D029C4D65C0037D9BE /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				AE2D50D129C4D6990037D9BE /* TabBar.storyboard */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		AE52B7D429C486980093550B = {
+			isa = PBXGroup;
+			children = (
+				AE52B7DF29C486980093550B /* VessyPlaces */,
+				AE52B7DE29C486980093550B /* Products */,
+				FC46863444A4E83B5A85990A /* Pods */,
+				D41D07297DFDAF8EA766E6DE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AE52B7DE29C486980093550B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE52B7DD29C486980093550B /* VessyPlaces.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE52B7DF29C486980093550B /* VessyPlaces */ = {
+			isa = PBXGroup;
+			children = (
+				AE8EF2FE29C8D34500E4832E /* Extensions */,
+				AEC48BF229C75BF000858F5D /* R.generated.swift */,
+				AE2D50C929C4B2F40037D9BE /* Models */,
+				AEC48BF829C77F2A00858F5D /* Managers */,
+				AE2D50C129C4AAA70037D9BE /* API */,
+				AE2D50C029C4AA8C0037D9BE /* Screens */,
+				AE52B7E029C486980093550B /* AppDelegate.swift */,
+				AE52B7E229C486980093550B /* SceneDelegate.swift */,
+				AE52B7E929C4869A0093550B /* Assets.xcassets */,
+				AE52B7EB29C4869A0093550B /* LaunchScreen.storyboard */,
+				AE52B7EE29C4869A0093550B /* Info.plist */,
+			);
+			path = VessyPlaces;
+			sourceTree = "<group>";
+		};
+		AE8EF2FE29C8D34500E4832E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE8EF2FF29C8D3DA00E4832E /* CLLocationCoordinate2D+Distance.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AEC48BF829C77F2A00858F5D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AEC48BF929C77F3500858F5D /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AEFC92C529C71D2100BC5B81 /* PlaceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				AEFC92C629C71D4A00BC5B81 /* PlaceDetailsViewController.swift */,
+				AEFC92C829C71D5700BC5B81 /* PlaceDetailsViewModel.swift */,
+				AEFC92CA29C71D6500BC5B81 /* PlaceDetailsView.storyboard */,
+			);
+			path = PlaceDetails;
+			sourceTree = "<group>";
+		};
+		D41D07297DFDAF8EA766E6DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50A2EF7FE534EAC660D1DB46 /* Pods_VessyPlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC46863444A4E83B5A85990A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE1505FEAA826B007092F096 /* Pods-VessyPlaces.debug.xcconfig */,
+				B3FF9BBF47869A89CF89060B /* Pods-VessyPlaces.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE52B7DC29C486980093550B /* VessyPlaces */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE52B7F129C4869A0093550B /* Build configuration list for PBXNativeTarget "VessyPlaces" */;
+			buildPhases = (
+				B34C5232844A7DA06E71C35E /* [CP] Check Pods Manifest.lock */,
+				AEC48BF129C75B6400858F5D /* ShellScript */,
+				AE52B7D929C486980093550B /* Sources */,
+				AE52B7DA29C486980093550B /* Frameworks */,
+				AE52B7DB29C486980093550B /* Resources */,
+				0B4320FD48645EA00B5819CA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VessyPlaces;
+			productName = VessyPlaces;
+			productReference = AE52B7DD29C486980093550B /* VessyPlaces.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE52B7D529C486980093550B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					AE52B7DC29C486980093550B = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = AE52B7D829C486980093550B /* Build configuration list for PBXProject "VessyPlaces" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE52B7D429C486980093550B;
+			productRefGroup = AE52B7DE29C486980093550B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE52B7DC29C486980093550B /* VessyPlaces */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE52B7DB29C486980093550B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFC92CB29C71D6500BC5B81 /* PlaceDetailsView.storyboard in Resources */,
+				AE2D50D229C4D6990037D9BE /* TabBar.storyboard in Resources */,
+				AE52B7ED29C4869A0093550B /* LaunchScreen.storyboard in Resources */,
+				AE52B7EA29C4869A0093550B /* Assets.xcassets in Resources */,
+				AE2D50D429C4D6FF0037D9BE /* MapView.storyboard in Resources */,
+				AE52B7E829C486980093550B /* ListView.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B4320FD48645EA00B5819CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VessyPlaces/Pods-VessyPlaces-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VessyPlaces/Pods-VessyPlaces-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VessyPlaces/Pods-VessyPlaces-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEC48BF129C75B6400858F5D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		B34C5232844A7DA06E71C35E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VessyPlaces-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE52B7D929C486980093550B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE33B62729C4DC6600253083 /* ListViewModel.swift in Sources */,
+				AEC48BFA29C77F3500858F5D /* LocationManager.swift in Sources */,
+				AE8EF30029C8D3DA00E4832E /* CLLocationCoordinate2D+Distance.swift in Sources */,
+				AEC48BF329C75BF000858F5D /* R.generated.swift in Sources */,
+				AE2D50C829C4B03E0037D9BE /* APIManager.swift in Sources */,
+				AE2D50CF29C4BC2C0037D9BE /* PlaceCell.swift in Sources */,
+				AE52B7E529C486980093550B /* ListViewController.swift in Sources */,
+				AE3DF66A29C5EA4400EA7F43 /* SearchTableViewCell.swift in Sources */,
+				AEC48BF529C75FF400858F5D /* PlaceCellViewModel.swift in Sources */,
+				AE2D50CD29C4B44D0037D9BE /* PlacesService.swift in Sources */,
+				AEC48BF729C775D800858F5D /* PlaceDetails.swift in Sources */,
+				AEFC92C729C71D4A00BC5B81 /* PlaceDetailsViewController.swift in Sources */,
+				AE52B7E129C486980093550B /* AppDelegate.swift in Sources */,
+				AE52B7E329C486980093550B /* SceneDelegate.swift in Sources */,
+				AE2D50CB29C4B3080037D9BE /* Place.swift in Sources */,
+				AE2D50D629C4D70C0037D9BE /* MapViewController.swift in Sources */,
+				AE33B62529C4DC5700253083 /* MapViewModel.swift in Sources */,
+				AEFC92C929C71D5700BC5B81 /* PlaceDetailsViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE52B7E629C486980093550B /* ListView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE52B7E729C486980093550B /* Base */,
+			);
+			name = ListView.storyboard;
+			sourceTree = "<group>";
+		};
+		AE52B7EB29C4869A0093550B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE52B7EC29C4869A0093550B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE52B7EF29C4869A0093550B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE52B7F029C4869A0093550B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE52B7F229C4869A0093550B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE1505FEAA826B007092F096 /* Pods-VessyPlaces.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H87DT32ZGT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VessyPlaces/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vessy.VessyPlaces;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE52B7F329C4869A0093550B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3FF9BBF47869A89CF89060B /* Pods-VessyPlaces.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H87DT32ZGT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VessyPlaces/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vessy.VessyPlaces;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE52B7D829C486980093550B /* Build configuration list for PBXProject "VessyPlaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE52B7EF29C4869A0093550B /* Debug */,
+				AE52B7F029C4869A0093550B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE52B7F129C4869A0093550B /* Build configuration list for PBXNativeTarget "VessyPlaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE52B7F229C4869A0093550B /* Debug */,
+				AE52B7F329C4869A0093550B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE52B7D529C486980093550B /* Project object */;
+}

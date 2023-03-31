@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="MapViewController" customModule="VessyPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pf-St-GqN">
+                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
+                                <gestureRecognizers/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="stW-9w-hWo" appends="YES" id="nX7-Qa-28L"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPs-f4-xLO">
+                                <rect key="frame" x="243" y="671" width="131" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qm6-ZE-G8m"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="plain" title=" Locate me" imagePadding="0.0" cornerStyle="capsule">
+                                    <imageReference key="image" image="location.circle.fill" catalog="system" symbolScale="large"/>
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <color key="baseForegroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="locateMeWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sPU-ug-2fC"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" placeholder="Search location" translatesAutoresizingMaskIntoConstraints="NO" id="xDq-S2-W0u">
+                                <rect key="frame" x="0.0" y="47" width="390" height="56"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="2jn-jR-bVe"/>
+                                </connections>
+                            </searchBar>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9LD-bk-nez">
+                                <rect key="frame" x="0.0" y="103" width="390" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="wlW-33-S0M"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchCell" id="KQf-Vw-QAc" customClass="SearchTableViewCell" customModule="VessyPlaces" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="53"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KQf-Vw-QAc" id="XQx-9l-Chd">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ia-vU-aGN">
+                                                    <rect key="frame" x="29.999999999999996" y="11" width="62.666666666666657" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1Ia-vU-aGN" firstAttribute="top" secondItem="XQx-9l-Chd" secondAttribute="topMargin" id="GQ5-he-lwe"/>
+                                                <constraint firstItem="1Ia-vU-aGN" firstAttribute="leading" secondItem="XQx-9l-Chd" secondAttribute="leadingMargin" constant="10" id="r8m-fy-aRE"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1Ia-vU-aGN" secondAttribute="bottom" constant="10" id="tlb-kd-Sqy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="1Ia-vU-aGN" id="f4H-OR-vcM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="hFz-Nk-XN4"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="801-2c-s6a"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEz-7n-Zhv">
+                                <rect key="frame" x="16.000000000000007" y="671" width="115.66666666666669" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OKq-sH-EuO"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="plain" image="clear" catalog="system" title="Clear Pin" imagePadding="0.0" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <color key="baseForegroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="myButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="baS-gt-aSJ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgE-hH-KkR">
+                                <rect key="frame" x="16" y="671" width="143" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wtb-wa-Lkt"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="Get Near Me" imagePadding="0.0" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <color key="baseForegroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="getNearMeWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5gk-Lw-fQs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqe-dm-0EQ">
+                                <rect key="frame" x="291" y="63" width="83" height="34.333333333333343"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Close"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="close:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zEh-H5-fRb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9LD-bk-nez" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="8IS-sL-XTm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xDq-S2-W0u" secondAttribute="trailing" id="9ae-zf-tyK"/>
+                            <constraint firstItem="9LD-bk-nez" firstAttribute="top" secondItem="xDq-S2-W0u" secondAttribute="bottom" id="GQq-xq-8D9"/>
+                            <constraint firstItem="7pf-St-GqN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Gam-BB-fjg"/>
+                            <constraint firstItem="xDq-S2-W0u" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Luy-qK-wHu"/>
+                            <constraint firstItem="7pf-St-GqN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Lw9-WC-V8u"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7pf-St-GqN" secondAttribute="trailing" id="R5D-C7-8iH"/>
+                            <constraint firstItem="Zqe-dm-0EQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="W12-OU-DpK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="GgE-hH-KkR" secondAttribute="bottom" constant="40" id="Ydc-0u-kii"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hEz-7n-Zhv" secondAttribute="bottom" constant="40" id="e6C-QR-fv6"/>
+                            <constraint firstItem="xDq-S2-W0u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fe8-gg-Qxe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jPs-f4-xLO" secondAttribute="trailing" constant="16" id="mgy-Hc-Opv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Zqe-dm-0EQ" secondAttribute="trailing" constant="16" id="qQb-O2-9Jj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7pf-St-GqN" secondAttribute="bottom" id="qry-CQ-0db"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9LD-bk-nez" secondAttribute="trailing" id="rFZ-Kf-yqC"/>
+                            <constraint firstItem="GgE-hH-KkR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="rK8-jw-gqG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jPs-f4-xLO" secondAttribute="bottom" constant="40" id="rdG-Hm-8l6"/>
+                            <constraint firstItem="hEz-7n-Zhv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="yfW-L9-5Zt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="mappin" catalog="system" id="1OH-pP-RUT"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="clearButton" destination="hEz-7n-Zhv" id="dIf-Cs-mal"/>
+                        <outlet property="closeButton" destination="Zqe-dm-0EQ" id="8vM-Qw-I9J"/>
+                        <outlet property="getNearMeButton" destination="GgE-hH-KkR" id="Nnm-iK-tzZ"/>
+                        <outlet property="mapView" destination="7pf-St-GqN" id="Bfc-lK-DEK"/>
+                        <outlet property="searchField" destination="xDq-S2-W0u" id="ecm-H6-nVJ"/>
+                        <outlet property="searchResultsTable" destination="9LD-bk-nez" id="2tu-a4-yj4"/>
+                        <segue destination="PRq-oG-chR" kind="presentation" identifier="showDetails" id="RPT-th-4mf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="stW-9w-hWo">
+                    <connections>
+                        <action selector="tabGestureWithSender:" destination="Y6W-OH-hqX" id="xIh-gD-u9e"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="58" y="-2"/>
+        </scene>
+        <!--PlaceDetailsView-->
+        <scene sceneID="Hfn-qi-esa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlaceDetailsView" id="PRq-oG-chR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6i-VV-0bq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="mappin" catalog="system" width="106" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

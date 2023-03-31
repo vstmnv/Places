@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Restaurants-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ListViewController" customModule="VessyPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="pPU-3L-xrl">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" id="ODw-Z9-3Hf">
+                            <rect key="frame" x="0.0" y="198.33333587646484" width="390" height="101"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeCell" id="AQi-ej-iMX" customClass="PlaceCell" customModule="VessyPlaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="120.33333587646484"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AQi-ej-iMX" id="9zv-er-f5h">
+                                    <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="120.33333587646484"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="260" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mTo-ej-M93">
+                                            <rect key="frame" x="125.99999999999999" y="11.000000000000004" width="219.66666666666663" height="48.333333333333343"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of restaurant" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hj-tZ-Hko">
+                                                    <rect key="frame" x="0.0" y="0.0" width="219.66666666666666" height="25.666666666666668"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance from you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0b-WG-DkD">
+                                                    <rect key="frame" x="0.0" y="25.666666666666664" width="219.66666666666666" height="22.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="16"/>
+                                                    <color key="textColor" systemColor="systemOrangeColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="n4D-gV-mIi">
+                                            <rect key="frame" x="10" y="10" width="100" height="100.33333333333333"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="PyL-3q-snS"/>
+                                                <constraint firstAttribute="width" constant="100" id="duh-ti-JRY"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="mTo-ej-M93" firstAttribute="top" secondItem="9zv-er-f5h" secondAttribute="topMargin" id="0fH-4a-zEt"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mTo-ej-M93" secondAttribute="trailing" constant="6" id="2Bs-5X-NeJ"/>
+                                        <constraint firstItem="n4D-gV-mIi" firstAttribute="leading" secondItem="9zv-er-f5h" secondAttribute="leading" constant="10" id="Mbx-2s-nkk"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="mTo-ej-M93" secondAttribute="bottom" id="OVm-c9-Vk9"/>
+                                        <constraint firstAttribute="bottom" secondItem="n4D-gV-mIi" secondAttribute="bottom" constant="10" id="QDp-bd-Gjp"/>
+                                        <constraint firstItem="mTo-ej-M93" firstAttribute="leading" secondItem="n4D-gV-mIi" secondAttribute="trailing" constant="16" id="e44-9g-YPF"/>
+                                        <constraint firstItem="n4D-gV-mIi" firstAttribute="top" secondItem="9zv-er-f5h" secondAttribute="top" constant="10" id="oFN-nZ-5jd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="distanceLabel" destination="F0b-WG-DkD" id="99b-Ra-qJY"/>
+                                    <outlet property="placeLabel" destination="5Hj-tZ-Hko" id="UwP-Zf-Eei"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Restaurants" image="building.columns.fill" catalog="system" id="zZy-0b-hmg"/>
+                    <navigationItem key="navigationItem" id="S76-GR-qJk"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="loadingBar" destination="ODw-Z9-3Hf" id="Qdc-Sw-OyI"/>
+                        <outlet property="tableView" destination="pPU-3L-xrl" id="yu8-Kk-kYx"/>
+                        <segue destination="kcc-ey-EG0" kind="presentation" identifier="showPlaceDetails" id="ejV-rO-8P5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906.1538461538462" y="-2.1327014218009479"/>
+        </scene>
+        <!--PlaceDetailsView-->
+        <scene sceneID="VIR-wk-ZpX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlaceDetailsView" id="kcc-ey-EG0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0ab-wI-u6H"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydB-qd-YMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2580" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="building.columns.fill" catalog="system" width="128" height="112"/>
+        <image name="burger" width="1000" height="1000"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
