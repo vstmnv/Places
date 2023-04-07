@@ -6,9 +6,11 @@
   - Details screen for restaurant - showing of some details for the venue.
   
 <p float="left">
+  <img src="https://user-images.githubusercontent.com/53311325/230587076-a515212c-174a-49a5-ae05-bd756f0a6442.jpeg" width="200">
   <img src="https://user-images.githubusercontent.com/53311325/230575468-747f39d5-dbfd-4aae-89b8-58228033ff04.jpeg" width="200">
   <img src="https://user-images.githubusercontent.com/53311325/230575472-e035f71d-ed36-4960-aa3b-10b3995bf625.jpeg" width="200">
   <img src="https://user-images.githubusercontent.com/53311325/230575474-dbc5836e-b777-4910-b228-ae8d21d5b92d.jpeg" width="200">
   <img src="https://user-images.githubusercontent.com/53311325/230575478-18fdd1ec-c434-4039-9811-858aa95654a2.jpeg" width="200">
   <img src="https://user-images.githubusercontent.com/53311325/230575480-718fccb1-e440-4453-afca-b161119621cc.jpeg" width="200">
 </p>
+
